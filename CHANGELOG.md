@@ -3,7 +3,7 @@
 Small change in test 18.1a to account for exception text in different versions of netmiko
 If you are already solving tasks, you can clone the tasks repository locally and then manually copy the updated dirs (files) to your repo.
 
-[You can see the changes in this commit](https://github.com/username/pyneng-examples-exercises-en/commit/a74e3c69575135a17b5620b2b6a045711c722649)
+[You can see the changes in this commit](https://github.com/natenka/pyneng-examples-exercises-en/commit/a74e3c69575135a17b5620b2b6a045711c722649)
 
 # Updated tasks and tests. (July 13 2021)
 
@@ -17,6 +17,6 @@ Changes in tests and tasks:
 * Updated pyneng_common_functions.py file in exercises directory
 
 
-[More about the changes](https://github.com/username/pyneng-examples-exercises-en/blob/main/CHANGELOG/2021_07_13.md)
+[More about the changes](https://github.com/natenka/pyneng-examples-exercises-en/blob/main/CHANGELOG/2021_07_13.md)
 
 

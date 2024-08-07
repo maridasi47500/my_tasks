@@ -186,7 +186,7 @@ def copy_answers(passed_tasks):
     if os.path.exists("pyneng-answers"):
         shutil.rmtree("pyneng-answers", onerror=remove_readonly)
     returncode, stderr = call_command(
-        "git clone --depth=1 https://github.com/username/pyneng-answers",
+        "git clone --depth=1 https://github.com/natenka/pyneng-answers",
         verbose=False,
         return_stderr=True,
     )

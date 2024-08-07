@@ -20,13 +20,13 @@ All examples and exercises have been tested in Python 3.7 and 3.8.
 
 To create your own repository based on a template, you need:
 
--  open [tasks repo](https://github.com/username/pyneng-examples-exercises-en)
+-  open [tasks repo](https://github.com/natenka/pyneng-examples-exercises-en)
 -  above the file list, click Use this template
 -  type a name for your repository
 -  click Create repository from template
 -  now you have a new repository with the same directory structure and files as pyneng-examples-exercises-en
 
-![](https://raw.githubusercontent.com/username/PyNEng/master/images/git/github_use_template.png)
+![](https://raw.githubusercontent.com/natenka/PyNEng/master/images/git/github_use_template.png)
 
 ### Clone repository
 
@@ -34,7 +34,7 @@ To work locally with the repository, you need to clone it.
 To do this, use the git clone command:
 
 ```
-$ git clone git@github.com:username/my_tasks.git
+$ git clone git@github.com:natenka/my_tasks.git
 Cloning into 'my_tasks'...
 remote: Counting objects: 241, done.
 remote: Compressing objects: 100% (191/191), done.
@@ -46,7 +46,7 @@ Checking connectivity... done.
 
 In the command output above, you need to change:
 
-- username username to your username on GitHub
+- username natenka to your username on GitHub
 - repository name my_tasks to the name of your repository
 
 As a result, in the current directory where the git clone command was executed,
@@ -66,5 +66,3 @@ As a rule, after the first period of adaptation to tests, it becomes easier to d
 
 [Learn more about how to work with the pyneng utility](https://pyneng.readthedocs.io/en/latest/book/additional_info/pyneng.html).
 
-# my_tasks
-# my_tasks
