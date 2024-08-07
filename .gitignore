@@ -25,6 +25,7 @@ pyneng.pdf
 ehthumbs.db
 Thumbs.db
 build/*
+pyneng.egg-info/*
 
 # Vim undo files. Python#
 # #######################
