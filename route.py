@@ -3,6 +3,7 @@ from render_figure import RenderFigure
 from user import User
 from country import Country
 from somehtml import Somehtml
+from scriptpython import Scriptpython
 
 
 from mydb import Mydb
@@ -69,7 +70,7 @@ class Route():
     def hello(self,search):
         print("hello action")
 
-        return self.render_figure.render_figure("welcome/index.html")
+        return self.render_figure.render_figure("welcome/home.html")
     def delete_user(self,params={}):
         getparams=("id",)
         myparam=self.post_data(self.getparams)
@@ -123,6 +124,15 @@ class Route():
             self.set_session(self.user)
             self.set_json("{\"redirect\":\"/sign_up\"}")
             return self.render_figure.render_json()
+    def pythonrecipe(self,params={}):
+        myparam=self.get_post_data()(params=("script_id",))
+        script=self.db.Script.getbyid(myparam["script_id"])["file"]
+        wow=Scriptpython(script)
+        a=wow.lancer1()
+        print(script)
+        self.set_notice("votre python script a pas été ajouté erreur")
+        self.set_json("{\"redirect\":\"/#monscript"+myparam["script_id"]+"\"")
+        return self.render_figure.render_json()
     def run(self,redirect=False,redirect_path=False,path=False,session=False,params={},url=False,post_data=False):
         if post_data:
             print("post data")
@@ -172,6 +182,7 @@ class Route():
             '^/save_user$':self.save_user,
             '^/update_user$':self.update_user,
             "^/seeuser/([0-9]+)$":self.seeuser,
+                        "^/python$":self.pythonrecipe,
             "^/edituser/([0-9]+)$":self.edit_user,
             "^/deleteuser/([0-9]+)$":self.delete_user,
             '^/login$':self.login,

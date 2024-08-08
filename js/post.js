@@ -55,6 +55,54 @@ return false;
   });
 	return false;
   });
+	$('.home a').on('click', function () {
+var myid=$(this)[0].id.replace("monscript","");
+var formdata=new FormData();
+formdata.append("script_id",myid);
+  $.ajax({
+    // Your server script to process the upload
+    url: "/python",
+    type: "post",
+
+    // Form data
+    data: formdata,
+
+    // Tell jQuery not to process data or worry about content-type
+    // You *must* include these options!
+    cache: false,
+    contentType: false,
+    processData: false,
+
+    // Custom XMLHttpRequest
+    success: function (data) {
+	    console.log("HEY")
+	    console.log(JSON.stringify(data))
+	    console.log(JSON.stringify(data.redirect))
+},
+	  beforeSend: function(){
+		         $('.loader').show()
+		     },
+	  complete: function(){
+		         $('.loader').hide();
+		    },
+    xhr: function () {
+      var myXhr = $.ajaxSettings.xhr();
+      if (myXhr.upload) {
+        // For handling the progress of the upload
+        myXhr.upload.addEventListener('progress', function (e) {
+          if (e.lengthComputable) {
+            $('progress').attr({
+              value: e.loaded,
+              max: e.total,
+            });
+          }
+        }, false);
+      }
+      return myXhr;
+    }
+  });
+	return false;
+  });
 
   
 });
