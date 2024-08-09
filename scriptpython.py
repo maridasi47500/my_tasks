@@ -17,7 +17,7 @@ class Scriptpython:
         if matermin == "py":
             myprogram="python3"
         wow=self.name.rfind("/")
-        monfichier=Fichier("./uploads","lancer_"+self.name.replace("/","").replace(".","")+".sh").ecrire("""xterm -l -hold -e "cd {myroot}{myname} && echo \\\"c'est  mon script\\\" && bash -l -c \\\"{program} ./{name}\\\""
+        monfichier=Fichier("./uploads","lancer_"+self.name.replace("/","").replace(".","")+".sh").ecrire("""xterm  -fa 'Monospace' -fs 20 -l -hold -e "cd {myroot}{myname} && echo \\\"c'est  mon script\\\" && bash -l -c \\\"{program} ./{name}\\\""
                 """.format(myroot=os.getcwd(),myname=self.name[0:(wow)].replace(".",""), name=self.name[(wow+1):],program=myprogram))
         x=subprocess.check_output(["sh","./uploads/lancer_"+self.name.replace("/","").replace(".","")+".sh"])
 
