@@ -69,4 +69,4 @@ They help to check whether everything matches the task, and also give feedback o
 As a rule, after the first period of adaptation to tests, it becomes easier to do tasks with tests. Testing is done using the pyneng utility.
 
 [Learn more about how to work with the pyneng utility](https://pyneng.readthedocs.io/en/latest/book/additional_info/pyneng.html).
-
+![alt text](tasks1.png) 
